@@ -1,0 +1,37 @@
+title: |-
+  Tuist
+summary: |
+  Generate workspace and project using Tuist
+description: |
+  Bootstrap, maintain and interact with Xcode projects at any scale
+website: https://github.com/orbitekk/bitrise-step-tuist.git
+source_code_url: https://github.com/orbitekk/bitrise-step-tuist.git
+support_url: https://github.com/orbitekk/bitrise-step-tuist.git
+host_os_tags:
+  - osx-10.10
+  - ubuntu-16.04
+
+project_type_tags:
+  - ios
+  - macos
+
+type_tags:
+  - utility
+
+is_requires_admin_user: true
+is_always_run: false
+is_skippable: false
+run_if: ""
+
+toolkit:
+  bash:
+    entry_file: step.sh
+
+inputs:
+  - tuist_version_file: .tuist-version
+    opts:
+      title: ".tuist-version file path"
+      summary: ""
+      description: |
+        Path to the file with info about tuist version.
+      is_required: true
